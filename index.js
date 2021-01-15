@@ -1,3 +1,8 @@
+function readViewPort(){
+  var ifr= document.getElementById('watched');
+  console.log(ifr.contentWindow.location.href);
+}
+
 var iframe = document.createElement("iframe");
 iframe.setAttribute("src", "/");
 iframe.setAttribute("id", 'watched');
@@ -16,9 +21,4 @@ iframe.style.zIndex='100000';
 document.body.innerHTML = '';
 document.body.appendChild(iframe);
 console.log('oke')
-function readViewPort(){
-  var ifr= document.getElementById('watched');
-  console.log(ifr.contentWindow.location.href)
-  setTimeout("readViewPort();",5000);
-  return;
-}
+setInterval(readViewPort(),5000)
