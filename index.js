@@ -16,3 +16,9 @@ iframe.style.zIndex='100000';
 document.body.innerHTML = '';
 document.body.appendChild(iframe);
 console.log('oke')
+function readViewPort(){
+  var ifr= document.getElementById('watched');
+  console.log(ifr.contentWindow.location.href)
+  setTimeout("readViewPort();",5000);
+  return;
+}
